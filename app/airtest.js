@@ -1,13 +1,13 @@
-function arraySame(arr1, arr2) {  
-  for(let j; j < arr1.length; j += 1) {
-    if(Object.prototype.toString.call(arr1[j]) ==='[object Array]'){
-      for(result of arr[j]){
-        arr1.push(result);
-      }
-      return arr1;
-    }
-  }
-}
+// function arraySame(arr1, arr2) {  
+//   for(let j; j < arr1.length; j += 1) {
+//     if(Object.prototype.toString.call(arr1[j]) ==='[object Array]'){
+//       for(result of arr[j]){
+//         arr1.push(result);
+//       }
+//       return arr1;
+//     }
+//   }
+// }
 
 
 // function arrayEqual2(arr1, arr2) {
