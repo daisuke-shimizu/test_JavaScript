@@ -1,0 +1,101 @@
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+</style>
+
+<div>
+  <h2>問題1</h2>
+  <div id="answer1"></div>
+  <div id="answer2"></div>
+  <div id="answer3"></div>
+</div>
+<div>
+  <h2>問題2</h2>
+  <div id="answer4"></div>
+  <div id="answer5"></div>
+  <div id="answer6"></div>
+</div>
+
+<script>
+/**
+  問題1
+  下のコードで関数arrayEqual1を呼び出している箇所が3箇所あります。
+  それぞれコメントで書いている値を返却する関数arrayEqual1を完成させなさい。
+  const a = [1,2,3,4];
+	const b = [1,2,3,4];
+*/
+function isEqual(arr1, arr2){
+  for (let i = 0; i < arr1.length; i +=1) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+};  
+
+
+  
+function arrayEqual1(arr1, arr2) {
+  if(isEqual(arr1, arr2) === true){
+    return true
+  }else{
+  return false;}
+};
+
+const a = [1,2,3,4];
+const b = [1,2,3,4];
+console.log(arrayEqual1(a, b)); // true
+document.getElementById('answer1').innerHTML = `${arrayEqual1(a,b)}`;
+
+const c = [1,3,3,4];
+const d = [1,2,3,4]; 
+console.log(arrayEqual1(c, d)); // false
+document.getElementById('answer2').innerHTML = `${arrayEqual1(c,d)}`;
+
+const e = [1,2,3,4,5,6];
+const f = [1,2,3,4,6,6];
+console.log(arrayEqual1(e, f)); // false
+document.getElementById('answer3').innerHTML = `${arrayEqual1(e,f)}`;
+
+
+/**
+  問題2
+  下のコードで関数arrayEqual2を呼び出している箇所が3箇所あります。
+  それぞれコメントで書いている値を返却する関数arrayEqual2を完成させなさい。
+*/
+
+function arraySame(arr1, arr2) {  
+  for(let j; j < arr1.length; j += 1) {
+    if(Object.prototype.toString.call(arr1[j]) ==='[object Array]'){
+      for(result of arr[j]){
+        arr1.push(result);
+      }
+    }
+  }
+}
+
+
+function arrayEqual2(arr1, arr2) {
+  if(){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+const g = [1,2,[3,4]];
+const h = [1,2,[3,4]];
+console.log(arrayEqual2(g, h)); // true
+document.getElementById('answer4').innerHTML = `${arrayEqual2(a,b)}`;
+
+const i = [1,2, [3,4,5]];
+const j = [1,2, [4,4,5]]; 
+console.log(arrayEqual2(i, j)); // false
+document.getElementById('answer5').innerHTML = `${arrayEqual2(c,d)}`;
+
+const k = [1,2, [3,4, [5,6]]];
+const l = [1,2, [3,4, 5,[6]]];
+console.log(arrayEqual2(k, l)); // false
+document.getElementById('answer6').innerHTML = `${arrayEqual2(e,f)}`;
+</script>
