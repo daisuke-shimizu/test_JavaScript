@@ -18,6 +18,6 @@ reader.on('close', () => {
           score = 0;
       }if(score>= mark){
       console.log(i);
-      }
+      }//if分をこの様につなげて書くのはどうなのか
   }
 });
