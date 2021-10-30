@@ -1,5 +1,5 @@
 process.stdin.resume();
-process.stdin.setEncoding('utf8');
+process.stdin.setEncoding('utf8'); 
 var lines = [];
 var reader = require('readline').createInterface({
   input: process.stdin,
